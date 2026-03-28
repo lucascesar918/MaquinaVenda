@@ -18,7 +18,6 @@ public class Main {
             isRunning = handleMenuChoice(opcao, logic);
         }
 
-        // Exibir relatório final ao sair
         logic.exibirRelatorioFinal();
         sc.close();
     }
@@ -26,16 +25,16 @@ public class Main {
     public static boolean handleMenuChoice(char opt, Logic logic) {
         switch (opt) {
             case '1':
-                logic.realizarCompra(0); // Chiclete
+                logic.realizarCompra(0);
                 return true;
             case '2':
-                logic.realizarCompra(1); // Chocolate
+                logic.realizarCompra(1);
                 return true;
             case '3':
-                logic.realizarCompra(2); // Pipoca
+                logic.realizarCompra(2);
                 return true;
             case '4':
-                logic.realizarCompra(3); // Suco
+                logic.realizarCompra(3);
                 return true;
             case '5':
                 logic.exibirTotalVendido();
@@ -44,7 +43,7 @@ public class Main {
                 logic.exibirHistorico();
                 return true;
             case '7':
-                return false; // Sair
+                return false;
             default:
                 System.out.println("Erro, apenas opções de 1 a 7!");
                 return true;
